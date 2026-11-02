@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CHRONOVA — Swiss Watchmaking, Genève</title>
+<meta name="description" content="CHRONOVA — independent Swiss watchmakers in Genève. Four icons in 904L steel, each assembled, regulated and finished by a single watchmaker.">
+<meta name="theme-color" content="#080808">
+<meta name="color-scheme" content="dark">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="CHRONOVA — Timeless by Design">
+<meta property="og:description" content="Four icons in steel. Engineered in Genève, finished by hand, made to be passed on.">
+<meta property="og:image" content="images/hero-desktop.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CHRONOVA — Timeless by Design">
+<meta name="twitter:description" content="Four icons in steel. Engineered in Genève, finished by hand, made to be passed on.">
+<meta name="twitter:image" content="images/hero-desktop.jpg">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap">
+
+<!-- Preload the hero (art-directed: portrait on phones, landscape from 768px) -->
+<link rel="preload" as="image" media="(max-width: 767px)" type="image/webp" fetchpriority="high"
+      imagesrcset="images/hero-mobile-640.webp 640w, images/hero-mobile-1080.webp 1080w, images/hero-mobile-1600.webp 1600w" imagesizes="100vw">
+<link rel="preload" as="image" media="(min-width: 768px)" type="image/webp" fetchpriority="high"
+      imagesrcset="images/hero-desktop-1080.webp 1080w, images/hero-desktop-1600.webp 1600w, images/hero-desktop-2400.webp 2400w" imagesizes="100vw">
+
+<link rel="stylesheet" href="css/style.css">
+
+<script>
+  /* Tiny pre-paint flags: JS present, preloader skip, and a safety net if main.js never runs. */
+  (function (d) {
+    var h = d.documentElement; h.classList.add('js');
+    try {
+      if (sessionStorage.getItem('cn-pre') || matchMedia('(prefers-reduced-motion: reduce)').matches) h.classList.add('skip-pre');
+    } catch (e) {}
+    setTimeout(function () { if (!window.__cn) h.classList.add('reveal-fallback', 'skip-pre'); }, 4000);
+  })(document);
+</script>
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important;clip-path:none!important}.line>span{transform:none!important}.preloader{display:none!important}</style></noscript>
+</head>
+
+<body id="top">
+
+<!-- ============ SVG ICON SPRITE (1px stroke, hand-written) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-mark" viewBox="0 0 24 24"><path d="M12 1.5 19.5 12 12 22.5 4.5 12Z"/><path d="M12 6v12"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5.5 5.5"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M3 12h17"/><path d="m14.5 6.5 5.5 5.5-5.5 5.5"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></symbol>
+    <symbol id="i-cert" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="m8.8 13.6-1.3 7.4 4.5-2.3 4.5 2.3-1.3-7.4"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.5 20 5.5v6.2c0 5-3.4 8.2-8 9.8-4.6-1.6-8-4.8-8-9.8V5.5Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.8"/><path d="M4.5 21c0-4.2 3.2-6.8 7.5-6.8s7.5 2.600 7.5 6.800"/></symbol>
+    <symbol id="i-swiss" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17"/><path d="M12 7.500v9M7.500 12h9"/></symbol>
+    <symbol id="i-chrono" viewBox="0 0 24 24"><circle cx="12" cy="13.500" r="8"/><path d="m12 13.500 3-4M9.500 2.500h5M12 2.500v3"/></symbol>
+    <symbol id="i-sapphire" viewBox="0 0 24 24"><path d="M7 4h10l4 5-9 11L3 9Z"/><path d="M3 9h18M9 9l3 11 3-11"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.200"/><circle cx="12" cy="12" r="7"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2.100 2.100M16.900 16.900 19 19M19 5l-2.100 2.100M7.100 16.900 5 19"/></symbol>
+    <symbol id="i-steel" viewBox="0 0 24 24"><path d="m12 2.500 8 4.600v9.800l-8 4.600-8-4.600V7.100Z"/><path d="m4 7.100 8 4.600 8-4.600M12 11.700v9.800"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ 0. PRELOADER ============ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <div class="preloader__word"><span>C</span><span>H</span><span>R</span><span>O</span><span>N</span><span>O</span><span>V</span><span>A</span></div>
+    <div class="preloader__line"></div>
+  </div>
+</div>
+
+<!-- ============ 1. ANNOUNCEMENT BAR ============ -->
+<div class="bar" id="bar" role="region" aria-label="Announcements">
+  <p class="bar__msg is-active">Complimentary worldwide shipping</p>
+  <span class="bar__dia" aria-hidden="true"></span>
+  <p class="bar__msg">Five-year international warranty</p>
+</div>
+
+<!-- ============ 2. HEADER ============ -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a class="logo" href="#top" aria-label="CHRONOVA — home">
+      <svg class="logo__mark" aria-hidden="true"><use href="#i-mark"/></svg>
+      <span class="logo__word">CHRONOVA</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#collection">Collections</a></li>
+        <li><a href="#atelier">Our Story</a></li>
+        <li><a href="#circle">Journal</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__tools">
+      <button class="icon-btn icon-btn--search" type="button" aria-label="Search"><svg aria-hidden="true"><use href="#i-search"/></svg></button>
+      <button class="icon-btn icon-btn--bag" type="button" aria-label="Bag, 0 items" aria-haspopup="dialog" data-open-bag>
+        <svg aria-hidden="true"><use href="#i-bag"/></svg>
+        <span class="bag-count" id="bagCount" aria-hidden="true">0</span>
+      </button>
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true" hidden>
+  <nav class="menu__nav" aria-label="Mobile">
+    <ul>
+      <li><a href="#top"><span>Home</span></a></li>
+      <li><a href="#collection"><span>Collections</span></a></li>
+      <li><a href="#atelier"><span>Our Story</span></a></li>
+      <li><a href="#circle"><span>Journal</span></a></li>
+      <li><a href="#contact"><span>Contact</span></a></li>
+    </ul>
+  </nav>
+  <div class="menu__foot">
+    <a href="#contact">Contact</a>
+    <a href="#contact">Instagram</a>
+    <span>EN · CHF</span>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============ 3. HERO ============ -->
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="hero__media" data-parallax="0.12">
+    <picture>
+      <source media="(min-width: 768px)" type="image/webp"
+              srcset="images/hero-desktop-640.webp 640w, images/hero-desktop-1080.webp 1080w, images/hero-desktop-1600.webp 1600w, images/hero-desktop-2400.webp 2400w" sizes="100vw">
+      <source media="(min-width: 768px)" type="image/jpeg" srcset="images/hero-desktop.jpg">
+      <source type="image/webp"
+              srcset="images/hero-mobile-640.webp 640w, images/hero-mobile-1080.webp 1080w, images/hero-mobile-1600.webp 1600w" sizes="100vw">
+      <img class="hero__img" src="images/hero-mobile.jpg" width="1080" height="1920" fetchpriority="high" decoding="async"
+           alt="A stainless-steel CHRONOVA watch with a brushed and polished bracelet, lit dramatically against a dark studio background">
+    </picture>
+  </div>
+  <div class="hero__shade" aria-hidden="true"></div>
+  <div class="hero__spot" aria-hidden="true"></div>
+
+  <div class="wrap hero__wrap">
+    <div class="hero__content">
+      <p class="label label--line hero__label" data-hero="1">Meridian 40 · Calibre CN-01</p>
+      <h1 class="hero__title" id="hero-title">
+        <span class="line"><span>Timeless</span></span>
+        <span class="line"><span><em>by</em> Design</span></span>
+      </h1>
+      <p class="hero__text" data-hero="2">A single block of 904L stainless steel, polished and brushed by hand. Sapphire, steel and a movement built to outlast its owner.</p>
+      <div class="hero__cta" data-hero="3">
+        <a class="btn btn--solid" href="#collection" data-magnetic>Discover the collection <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--glass" href="#atelier" data-magnetic>Explore our world</a>
+      </div>
+      <dl class="specs" data-hero="4">
+        <div><dt>Case diameter</dt><dd>40<small>mm</small></dd></div>
+        <div><dt>Power reserve</dt><dd>72<small>h</small></dd></div>
+        <div><dt>Water resistance</dt><dd>100<small>m</small></dd></div>
+      </dl>
+    </div>
+
+    <p class="glass pricetag" data-hero="5"><span class="label">Ref. CN-4010 · Noir</span><span class="pricetag__p">CHF 12,400</span></p>
+    <a class="scroll" href="#credentials" data-hero="5" aria-label="Scroll to content"><span>Scroll</span><i aria-hidden="true"></i></a>
+  </div>
+</section>
+
+<!-- ============ 4. CREDIBILITY ============ -->
+<section class="cred section" id="credentials" aria-labelledby="cred-title">
+  <div class="wrap">
+    <h2 class="cred__quote" id="cred-title" data-reveal>Engineered in Genève. Finished by hand. <em>Made to be passed on.</em></h2>
+  </div>
+  <div class="marquee" data-marquee>
+    <ul class="marquee__track">
+      <li><svg aria-hidden="true"><use href="#i-swiss"/></svg><h3>Swiss Made</h3><p class="label">Genève atelier</p></li>
+      <li><svg aria-hidden="true"><use href="#i-chrono"/></svg><h3>Certified Chronometer</h3><p class="label">−2 / +2 s per day</p></li>
+      <li><svg aria-hidden="true"><use href="#i-sapphire"/></svg><h3>Sapphire Crystal</h3><p class="label">Anti-reflective</p></li>
+      <li><svg aria-hidden="true"><use href="#i-gear"/></svg><h3>In-house Calibre</h3><p class="label">CN-01 automatic</p></li>
+      <li><svg aria-hidden="true"><use href="#i-steel"/></svg><h3>904L Steel</h3><p class="label">Corrosion resistant</p></li>
+      <li class="dup" aria-hidden="true"><svg><use href="#i-swiss"/></svg><h3>Swiss Made</h3><p class="label">Genève atelier</p></li>
+      <li class="dup" aria-hidden="true"><svg><use href="#i-chrono"/></svg><h3>Certified Chronometer</h3><p class="label">−2 / +2 s per day</p></li>
+      <li class="dup" aria-hidden="true"><svg><use href="#i-sapphire"/></svg><h3>Sapphire Crystal</h3><p class="label">Anti-reflective</p></li>
+      <li class="dup" aria-hidden="true"><svg><use href="#i-gear"/></svg><h3>In-house Calibre</h3><p class="label">CN-01 automatic</p></li>
+      <li class="dup" aria-hidden="true"><svg><use href="#i-steel"/></svg><h3>904L Steel</h3><p class="label">Corrosion resistant</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 5. FEATURED COLLECTION ============ -->
+<section class="collection section section--charcoal" id="collection" aria-labelledby="col-title">
+  <div class="wrap">
+    <header class="sec-head">
+      <div>
+        <p class="label" data-reveal>The Collection · 2026</p>
+        <h2 id="col-title" class="h2" data-reveal>Four icons <em>in steel</em></h2>
+      </div>
+      <a class="link" href="#collection" data-reveal>View all references</a>
+    </header>
+  </div>
+
+  <div class="cards-wrap">
+    <div class="cards" id="cards" tabindex="0" role="group" aria-roledescription="carousel" aria-label="Featured watches">
+
+      <article class="card" data-reveal style="--d:0s">
+        <div class="stage" data-cursor="View">
+          <span class="badge glass">New</span>
+          <picture class="stage__img">
+            <source type="image/webp" srcset="images/watch-1-640.webp 640w, images/watch-1-1080.webp 1080w, images/watch-1-1600.webp 1600w" sizes="(min-width:1200px) 22vw, (min-width:600px) 44vw, 82vw">
+            <img src="images/watch-1.jpg" width="1600" height="2000" loading="lazy" decoding="async" alt="Meridian 40 — stainless-steel chronograph with a noir sunburst dial, resting on dark stone">
+          </picture>
+          <picture class="stage__img stage__alt" aria-hidden="true">
+            <source type="image/webp" srcset="images/watch-1-alt-640.webp 640w, images/watch-1-alt-1080.webp 1080w, images/watch-1-alt-1600.webp 1600w" sizes="(min-width:1200px) 22vw, (min-width:600px) 44vw, 82vw">
+            <img src="images/watch-1-alt.jpg" width="1600" height="2000" loading="lazy" decoding="async" alt="">
+          </picture>
+          <button class="add glass" type="button" data-add="meridian-40">Add to bag</button>
+        </div>
+        <div class="card__meta">
+          <div><h3><a class="card__link" href="#p-meridian-40">Meridian 40</a></h3><p class="label">Noir sunburst dial</p></div>
+          <p class="price">CHF 12,400</p>
+        </div>
+      </article>
+
+      <article class="card" data-reveal style="--d:.08s">
+        <div class="stage" data-cursor="View">
+          <picture class="stage__img">
+            <source type="image/webp" srcset="images/watch-2-640.webp 640w, images/watch-2-1080.webp 1080w, images/watch-2-1600.webp 1600w" sizes="(min-width:1200px) 22vw, (min-width:600px) 44vw, 82vw">
+            <img src="images/watch-2.jpg" width="1600" height="2000" loading="lazy" decoding="async" alt="Équinoxe 39 — stainless-steel watch with a platinum dial and steel bracelet">
+          </picture>
+          <picture class="stage__img stage__alt" aria-hidden="true">
+            <source type="image/webp" srcset="images/watch-2-alt-640.webp 640w, images/watch-2-alt-1080.webp 1080w, images/watch-2-alt-1600.webp 1600w" sizes="(min-width:1200px) 22vw, (min-width:600px) 44vw, 82vw">
+            <img src="images/watch-2-alt.jpg" width="1600" height="2000" loading="lazy" decoding="async" alt="">
+          </picture>
+          <button class="add glass" type="button" data-add="equinoxe-39">Add to bag</button>
+        </div>
+        <div class="card__meta">
+          <div><h3><a class="card__link" href="#p-equinoxe-39">Équinoxe 39</a></h3><p class="label">Platinum dial</p></div>
+          <p class="price">CHF 14,900</p>
+        </div>
+      </article>
+
+      <article class="card" data-reveal style="--d:.16s">
+        <div class="stage" data-cursor="View">
+          <span class="badge glass">Limited · 250</span>
+          <picture class="stage__img">
+            <source type="image/webp" srcset="images/watch-3-640.webp 640w, images/watch-3-1080.webp 1080w, images/watch-3-1600.webp 1600w" sizes="(min-width:1200px) 22vw, (min-width:600px) 44vw, 82vw">
+            <img src="images/watch-3.jpg" width="1600" height="2000" loading="lazy" decoding="async" alt="Orbital 42 — close view of a steel chronograph with a graphite dial and three sub-dials">
+          </picture>
+          <button class="add glass" type="button" data-add="orbital-42">Add to bag</button>
+        </div>
+        <div class="card__meta">
+          <div><h3><a class="card__link" href="#p-orbital-42">Orbital 42</a></h3><p class="label">Graphite dial</p></div>
+          <p class="price">CHF 18,600</p>
+        </div>
+      </article>
+
+      <article class="card" data-reveal style="--d:.24s">
+        <div class="stage" data-cursor="View">
+          <picture class="stage__img">
+            <source type="image/webp" srcset="images/watch-4-640.webp 640w, images/watch-4-1080.webp 1080w, images/watch-4-1600.webp 1600w" sizes="(min-width:1200px) 22vw, (min-width:600px) 44vw, 82vw">
+            <img src="images/watch-4.jpg" width="1600" height="2000" loading="lazy" decoding="async" alt="Solstice 38 — close view of a steel watch with a white lacquer dial and layered sub-dials">
+          </picture>
+          <button class="add glass" type="button" data-add="solstice-38">Add to bag</button>
+        </div>
+        <div class="card__meta">
+          <div><h3><a class="card__link" href="#p-solstice-38">Solstice 38</a></h3><p class="label">White lacquer dial</p></div>
+          <p class="price">CHF 11,200</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="wrap carousel-ui" aria-hidden="false">
+      <div class="progress" aria-hidden="true"><i id="progressThumb"></i></div>
+      <p class="counter label" id="counter" aria-live="polite"><span id="counterCur">1</span> / 4</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. EDITORIAL CRAFTSMANSHIP ============ -->
+<section class="atelier section" id="atelier" aria-labelledby="at-title">
+  <div class="wrap atelier__grid">
+    <figure class="atelier__fig" data-reveal="clip">
+      <div class="atelier__imgwrap" data-parallax="0.08">
+        <picture>
+          <source type="image/webp" srcset="images/craft-640.webp 640w, images/craft-1080.webp 1080w, images/craft-1600.webp 1600w" sizes="(min-width:900px) 55vw, 100vw">
+          <img src="images/craft.jpg" width="1600" height="2000" loading="lazy" decoding="async" alt="Macro of polished and brushed steel bracelet links in low light">
+        </picture>
+      </div>
+      <figcaption class="glass caption"><span class="label">Macro · ×12</span> Calibre CN-01, hand-finished bridges</figcaption>
+    </figure>
+
+    <div class="atelier__text">
+      <p class="label" data-reveal>The Atelier</p>
+      <h2 id="at-title" class="h2" data-reveal>The patience of <em>the hand</em></h2>
+      <p class="body" data-reveal>Every CHRONOVA movement is assembled, regulated and finished by a single watchmaker, who signs the case back before it leaves Genève. Nothing is hidden, so nothing is left unfinished.</p>
+      <ol class="finishes">
+        <li data-reveal><span class="num" aria-hidden="true">I</span><div><h3>Côtes de Genève</h3><p>Parallel waves cut across every bridge.</p></div></li>
+        <li data-reveal><span class="num" aria-hidden="true">II</span><div><h3>Perlage</h3><p>Overlapping circular graining on the main plate.</p></div></li>
+        <li data-reveal><span class="num" aria-hidden="true">III</span><div><h3>Anglage</h3><p>Bevelled, mirror-polished edges, by hand.</p></div></li>
+      </ol>
+      <div data-reveal><a class="btn btn--glass" href="#atelier" data-magnetic>Visit the Atelier</a></div>
+    </div>
+
+    <div class="atelier__details">
+      <figure class="detail detail--1" data-reveal>
+        <picture>
+          <source type="image/webp" srcset="images/detail-1-640.webp 640w, images/detail-1-1080.webp 1080w" sizes="(min-width:900px) 18vw, 45vw">
+          <img src="images/detail-1.jpg" width="1080" height="1080" loading="lazy" decoding="async" alt="Macro of a dial with layered sub-dials and slim steel hands">
+        </picture>
+      </figure>
+      <figure class="detail detail--2" data-reveal style="--d:.1s">
+        <picture>
+          <source type="image/webp" srcset="images/detail-2-640.webp 640w, images/detail-2-1080.webp 1080w, images/detail-2-1600.webp 1600w" sizes="(min-width:900px) 22vw, 45vw">
+          <img src="images/detail-2.jpg" width="1600" height="1600" loading="lazy" decoding="async" alt="Macro of a screw-down crown, chronograph pushers and a graduated bezel">
+        </picture>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. SERVICES ============ -->
+<section class="services section section--charcoal" id="services" aria-labelledby="sv-title">
+  <div class="wrap">
+    <header class="sec-head sec-head--stack">
+      <p class="label" data-reveal>The CHRONOVA Promise</p>
+      <h2 id="sv-title" class="h2" data-reveal>Service, <em>without</em> compromise</h2>
+    </header>
+    <ul class="svc-grid">
+      <li class="glass svc" data-reveal style="--d:0s"><svg aria-hidden="true"><use href="#i-globe"/></svg><div><h3>Worldwide Shipping</h3><p>Insured, discreet delivery, at no cost to you.</p></div></li>
+      <li class="glass svc" data-reveal style="--d:.08s"><svg aria-hidden="true"><use href="#i-cert"/></svg><div><h3>Authenticity Guaranteed</h3><p>A numbered certificate and a sealed digital passport.</p></div></li>
+      <li class="glass svc" data-reveal style="--d:.16s"><svg aria-hidden="true"><use href="#i-shield"/></svg><div><h3>International Warranty</h3><p>Five years of coverage at every CHRONOVA service centre.</p></div></li>
+      <li class="glass svc" data-reveal style="--d:.24s"><svg aria-hidden="true"><use href="#i-person"/></svg><div><h3>Personal Assistance</h3><p>A dedicated advisor, by appointment, video call or private viewing.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 8. NEWSLETTER ============ -->
+<section class="circle section" id="circle" aria-labelledby="ci-title">
+  <div class="circle__bg" aria-hidden="true"><span>CHRONOVA</span></div>
+  <div class="wrap circle__wrap">
+    <svg class="circle__mark" aria-hidden="true"><use href="#i-mark"/></svg>
+    <p class="label" data-reveal>By invitation</p>
+    <h2 id="ci-title" class="h2" data-reveal>The Private <em>Circle</em></h2>
+    <p class="body" data-reveal>First access to limited editions, private atelier visits and the stories behind each calibre. Four letters a year, never more.</p>
+
+    <form class="nl" id="nl" novalidate data-reveal>
+      <div class="nl__row">
+        <label class="sr" for="nl-email">Email address</label>
+        <input id="nl-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Your email address" aria-describedby="nl-msg" required>
+        <button class="btn btn--solid" type="submit" data-magnetic>Join</button>
+      </div>
+      <p class="nl__msg" id="nl-msg" role="alert" aria-live="polite"></p>
+    </form>
+    <p class="nl__ok" id="nl-ok" role="status" hidden>Welcome to the Private Circle.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ 9. FOOTER ============ -->
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="logo" href="#top" aria-label="CHRONOVA — back to top">
+          <svg class="logo__mark" aria-hidden="true"><use href="#i-mark"/></svg>
+          <span class="logo__word">CHRONOVA</span>
+        </a>
+        <p>Independent watchmakers.<br>Rue du Rhône, Genève.</p>
+      </div>
+
+      <div class="footer__cols">
+        <section class="fcol">
+          <h3><button type="button" aria-expanded="false" aria-controls="f1">Collections<i aria-hidden="true"></i></button></h3>
+          <div class="fcol__panel" id="f1"><ul>
+            <li><a href="#p-meridian-40">Meridian</a></li><li><a href="#p-equinoxe-39">Équinoxe</a></li><li><a href="#p-orbital-42">Orbital</a></li><li><a href="#p-solstice-38">Solstice</a></li>
+          </ul></div>
+        </section>
+        <section class="fcol">
+          <h3><button type="button" aria-expanded="false" aria-controls="f2">Maison<i aria-hidden="true"></i></button></h3>
+          <div class="fcol__panel" id="f2"><ul>
+            <li><a href="#atelier">Our Story</a></li><li><a href="#atelier">The Atelier</a></li><li><a href="#circle">Journal</a></li><li><a href="#contact">Boutiques</a></li>
+          </ul></div>
+        </section>
+        <section class="fcol">
+          <h3><button type="button" aria-expanded="false" aria-controls="f3">Client Care<i aria-hidden="true"></i></button></h3>
+          <div class="fcol__panel" id="f3"><ul>
+            <li><a href="#contact">Contact</a></li><li><a href="#services">Servicing</a></li><li><a href="#services">Warranty</a></li><li><a href="#services">Shipping &amp; Returns</a></li>
+          </ul></div>
+        </section>
+        <section class="fcol">
+          <h3><button type="button" aria-expanded="false" aria-controls="f4">Follow<i aria-hidden="true"></i></button></h3>
+          <div class="fcol__panel" id="f4"><ul>
+            <li><a href="#contact">Instagram</a></li><li><a href="#contact">YouTube</a></li><li><a href="#contact">LinkedIn</a></li>
+          </ul></div>
+        </section>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <p>© 2026 CHRONOVA SA</p>
+      <ul>
+        <li><a href="#contact">Privacy</a></li><li><a href="#contact">Terms</a></li><li><a href="#contact">Cookies</a></li>
+        <li><span>English · CHF</span></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ BAG DRAWER ============ -->
+<div class="panel panel--bag" id="bag" role="dialog" aria-modal="true" aria-labelledby="bag-title" aria-hidden="true" hidden>
+  <div class="panel__backdrop" data-close></div>
+  <aside class="panel__sheet">
+    <header class="panel__head">
+      <h2 id="bag-title">Your bag</h2>
+      <button class="icon-btn" type="button" data-close aria-label="Close bag"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+    </header>
+    <div class="panel__body" id="bag-body"></div>
+    <footer class="panel__foot" id="bag-foot"></footer>
+  </aside>
+</div>
+
+<!-- ============ PRODUCT DETAIL ============ -->
+<div class="panel panel--pdp" id="pdp" role="dialog" aria-modal="true" aria-labelledby="pdp-title" aria-hidden="true" hidden>
+  <div class="panel__sheet">
+    <header class="panel__head">
+      <p class="label">The Collection · 2026</p>
+      <button class="icon-btn" type="button" data-close aria-label="Close product"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+    </header>
+    <div class="panel__body" id="pdp-body"></div>
+  </div>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
